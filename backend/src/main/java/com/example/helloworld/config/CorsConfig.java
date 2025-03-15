@@ -10,10 +10,10 @@ public class CorsConfig {
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
-            public void addCorsMappings(@NonNull CorsRegistry registry) { // 添加 @NonNull 注解
-                registry.addMapping("/api/**") // 允许所有 API 路径
-                        .allowedOrigins("http://localhost:3000") // 允许前端地址
-                        .allowedMethods("GET", "POST", "PUT", "DELETE"); // 允许的 HTTP 方法
+            public void addCorsMappings(@NonNull CorsRegistry registry) {
+                registry.addMapping("/api/**") 
+                        .allowedOrigins("http://localhost:3000") 
+                        .allowedMethods("GET", "POST", "PUT", "DELETE"); 
             }
         };
     }
