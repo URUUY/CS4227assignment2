@@ -20,7 +20,6 @@ function ResearchList() {
     try {
       await approveResearchTask(id);
       alert('ACCEPT！');
-      // 刷新任务列表
       const response = await getResearchTasks();
       setTasks(Object.values(response.data));
     } catch (error) {
@@ -33,7 +32,6 @@ function ResearchList() {
     try {
       await rejectResearchTask(id);
       alert('REJECT');
-      // 刷新任务列表
       const response = await getResearchTasks();
       setTasks(Object.values(response.data));
     } catch (error) {
