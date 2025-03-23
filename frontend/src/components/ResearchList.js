@@ -8,7 +8,7 @@ function ResearchList() {
     const fetchTasks = async () => {
       try {
         const response = await getResearchTasks();
-        setTasks(Object.values(response.data)); // 将 Map 转换为数组
+        setTasks(Object.values(response.data)); 
       } catch (error) {
         console.error('GIVE TASK ERROR', error);
       }
